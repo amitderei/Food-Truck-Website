@@ -1,0 +1,231 @@
+<html>
+    <head>
+        <title>Kapols Food Track (New)</title>
+        <link rel="stylesheet" href="cart.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+	    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+        <script src="hw33.js"></script>
+        <script src="hw44.js"></script>
+    </head>
+    <body dir="rtl">
+    <form id="my_form">
+        <div class="banner">
+            <div class="navbar">
+                <img src="logo.png" class="logo">
+                <ul> <!-- create the bar -->
+                    <li><a href="hw333.html">בית</a></li>
+                    <li><a href="cart333.html">הזמנה</a></li>
+                    <li><a href="customers_recommend.html">לקוחות ממליצים</a></li>
+                    <li><a href="#" onclick="return OpenContact();">צור קשר</a></li>
+                    <li><a href="#" onclick="return OpenAdmin();">איזור מנהל</a></li>       
+                </ul>
+            </div>
+        </div>
+
+	<br><br>
+        <div>
+        <div id="contentContainer">
+        </div>
+        
+        <div class="discount">
+            </br></br>
+            <marquee width="100%" style="text-align:left;border:solid;border-width:0;" direction="left" scrollamount="10" hspace="0" scrolldelay="0" behavior="alternate" height="60px">
+                לרגל פתיחת האתר- 10% הנחה על כל התפריט!
+            </marquee>
+        </div>
+
+
+
+        <div id="OrderAccordion"> <!--order form -->
+            <h3>פרטי לקוח</h3>
+            <div>
+                <p>
+                    <table>
+                        <tr>
+                            <td>שם הלקוח:</td>
+                            <td><input type="text" id="customername" name="name" oninput="updateCartTitle()"></td>
+                        </tr>	
+                        <tr>
+                            <td>מספר טלפון:</td>
+                            <td><input type="text" id="phonenum" name="name"></td>
+                        </tr>		
+                        <tr>
+                            <td>דוא"ל:</td>
+                            <td><input type="text" id="email" name="mail"></td>
+                        </tr>	
+                        <tr>
+                            <td colspan="2">
+                                <input type="checkbox" id="adversting" name="adversting" value="adversting">
+                                    אשמח לקבל עדכון על הטבות מיוחדות עבורי לפרטי ההתקשרות שמסרתי
+                                </input>
+                            </td>
+                        </tr>	
+                        <tr>
+                            <td colspan="2">
+                                <p>בחר אופציה:</p><br/>
+                                <input type="radio" id="in" name="inorout" value="in" onclick="closeDetails()"> לשבת
+                                <input type="radio" id="out" name="inorout" value="out" onclick="closeDetails()">לקחת
+                                <input type="radio" id="delivery" name="inorout" value="delivery" onclick="deliveryDetails()"> משלוח
+                                <table id="seatortake"></table>
+                            </td>
+                        </tr>	
+                    </table>
+                </p>
+            </div>
+        
+            <h3>תפריט הזמנות</h3> <!-- menu -->
+            <div>
+                <p>
+                    <table>
+                        <tr>
+                            <td><img src="343084779_3548196138801092_1823645582682001253_n.jpg" width="200" height="200"></td>
+                            <td>
+                                <h3>נקניקיית עוף</h3>
+                                <p>נקניקיית עוף עסיסית בלחמנייה טרייה, מוגשת עם עגבניה, סלט קולסלאו וקטשופ.</p>
+                            </td>
+                            <td>20₪</td>
+                            <td>
+                                <button type="button" onclick="checkMeal(1)">הוסף לעגלה</button></br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="355662856_230368973147748_8817904175066275911_n.jpg" width="200" height="200"></td>
+                            <td>
+                                <h3>שניצל בחלה</h3>
+                                <p>חלת הבית עם שניצל פריך, מטבוחה עשירה, חציל קלוי ופלפל קלוי.</p>
+                            </td>
+                            <td>40₪</td>
+                            <td>
+                                <button type="button" onclick="checkMeal(2)">הוסף לעגלה</button></input></br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="350258219_1315885205673246_9025938820830355451_n.jpg" width="200" height="200"></td>
+                            <td>
+                                <h3>טורטייה אנטריקוט</h3>
+                                <p>טורטייה טרייה במילוי אנטריקוט עסיסי, מיונז וחסה, סגורה בטוסטר להשלמת הטעם.</p>
+                            </td>
+                            <td>50 ₪</td>
+                            <td>
+                                <button type="button" onclick="checkMeal(3)">הוסף לעגלה</button></input></br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="332907628_886558379095529_7994651915639191234_n.jpg" width="200" height="200"></td>
+                            <td>
+                                <h3>נשנושי עוף</h3>
+                                <p>נקניקיות עוף קטנות וחתוכות, מוגשות עם מגוון רטבים.</p>
+                            </td>
+                            <td>30 ₪</td>
+                            <td>
+                                <button type="button" onclick="checkMeal(4)">הוסף לעגלה</button></br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="336697425_1384944185379552_5532739543933996705_n.jpg" width="200" height="200"></td>
+                            <td>
+                                <h3>ווק אורז עם אסאדו</h3>
+                                <p>אורז לבן עם אסאדו מפורק, שום קונפי, עיגולי בצל סגול והמון פטרוזיליה טרייה.</p>
+                            </td>
+                            <td>45 ₪</td>
+                            <td>
+                                <button type="button" onclick="checkMeal(5)">הוסף לעגלה</button></input></br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="331915389_1626693991099922_1765597093492816841_n.jpg" width="200" height="200"></td>
+                            <td>
+                                <h3>פלטת טוגנים</h3>
+                                <p>טוגנים קלים וטעימים מוגשים עם מגון רטבים.</p>
+                            </td>
+                            <td>55 ₪</td>
+                            <td>
+                                <button type="button" onclick="checkMeal(6)">הוסף לעגלה</button></br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="311615382_121704697347510_7937607092705631680_n.jpg" width="200" height="200"></td>
+                            <td>
+                                <h3>רטבים לבחירה</h3>
+                                <p>מגוון רחב של רטבים לבחירה.</p>
+                            </td>
+                            <td>1 ₪ ליחידה</td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>חומוס</td>
+                                        <td><button type="button" onclick="checkMeal(7)">הוסף לעגלה</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>מיונז</td>
+                                        <td><button type="button" onclick="checkMeal(8)">הוסף לעגלה</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>טחינה</td>
+                                        <td><button type="button" onclick="checkMeal(9)">הוסף לעגלה</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>שום</td>
+                                        <td><button type="button" onclick="checkMeal(10)">הוסף לעגלה</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>פסטו</td>
+                                        <td><button type="button" onclick="checkMeal(11)">הוסף לעגלה</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>צ'ילי מתוק</td>
+                                        <td><button type="button" onclick="checkMeal(12)">הוסף לעגלה</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>חרדל</td>
+                                        <td><button type="button" onclick="checkMeal(13)">הוסף לעגלה</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>שזיפים</td>
+                                        <td><button type="button" onclick="checkMeal(14)">הוסף לעגלה</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>שום דבש</td>
+                                        <td><button type="button" onclick="checkMeal(15)">הוסף לעגלה</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ברביקיו</td>
+                                        <td><button type="button" onclick="checkMeal(16)">הוסף לעגלה</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>גואקמולה</td>
+                                        <td><button type="button" onclick="checkMeal(17)">הוסף לעגלה</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>חריף הבית</td>
+                                        <td><button type="button" onclick="checkMeal(18)">הוסף לעגלה</button></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </p>
+                <p>
+                    <textarea id="comments" name="comments" rows="8" cols="35" oninput="updateComments()">הערות מיוחדות</textarea>
+                    <br><br>
+                </p>
+            </div>
+        </div>
+        
+    
+    <div class="cart-container"> <!-- create the cart -->
+        <h2 id="cartTitle">עגלת קניות</h2>
+        <ul id="cartItems"></ul><!-- the cart items is respectively change-->
+        <p>סה"כ: <span id="totalPrice">0</span>₪</p> <!-- the total price is respectively change-->
+        <p>הערות מיוחדות:<span id="comm">אין</span></p>
+        <button type="button" onclick="checkText()">שלח</button>
+        <button type="button" onclick="clearButton()">איפוס/ביטול הזמנה</button>
+        <p id="res"></p>
+        <p id="recentOrder"></p>
+    </div>
+    </form>
+    </body>
+
+    
+</html>

@@ -1,0 +1,96 @@
+<html>
+<head>
+	<title>Kapols Food Track (New)</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style33.css">
+    <script src="hw33.js"></script>
+    <script src="hw44.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
+</head>
+<body dir="rtl">
+<form id="my_form">
+    <div class="banner">
+        <div class="navbar">
+            <img src="logo.png" class="logo">
+            <ul> <!-- create the bar -->
+                <li><a href="#home" data-target="home" onclick="return CloseAllPopups();">בית</a></li>
+				<li><a href="cart333.html">הזמנה</a></li>
+                <li><a href="customers_recommend.html">לקוחות ממליצים</a></li>
+                <li><a href="#" id="openContactPopup">צור קשר</a></li>
+                <li><a href="#" id="openAdminPopup">איזור מנהל</a></li>       
+            </ul>
+        </div>
+        <div id="home" class="content section active">
+            <h1>קפול'ס פוד טראק</h1>
+            <h3>אוכל - אווירה - על הדרך</h3>
+            <p>השיטה 19, נשר</p>
+            <p>כשר</p>
+            <h4>
+                <div class="video-container">
+                    <video width="750" height="350" controls>
+                        <source src="video1.mp4" type="video/mp4">
+                        <source src="video1.mp4" type="video/ogg">
+                        הדפדפן שלך אינו תומך בתג הווידאו.
+                    </video>
+                </div>
+            </h4>
+          <div>
+            <button type="button"><span></span> <a href="https://www.facebook.com/kapulstruck/">
+                <img src="facebook-logo-facebook-icon-free-free-vector.jpg" alt="link to facebook" width="50" height="50">
+                </a></br></br>FACEBOOK
+            </button>
+            <button type="button"><span></span> <a href="https://www.instagram.com/kapuls_truck/">
+                    <img src="instegramphoto.jpg" alt="link to instagram" width="50" height="50"></a></br></br>INSTAGRAM
+            </button>
+            <button type="button"><span></span> <a href="https://www.tiktok.com/@kapulstruck/">
+                <img src="tiktokphoto.png" alt="link to tiktok" width="50" height="50">
+                </a></br></br>TIKTOK
+            </button>
+			<div id="Updates" class="section"> <!-- text boxes -->
+				<div class="news-box">
+					<h3>עדכונים אחרונים</h3>
+					<p>אנו שמחים להודיע על פתיחת האתר החדש!</p>
+				</div>
+				<div class="news-box">
+					<h3>אירועים קרובים</h3>
+					<p>בתאריך ה-30.08 יתקיים אירוע סיום החופש הגדול</p>
+				</div>      
+			</div>
+            </div>
+        </div>
+    </div>
+	
+ 
+	</br></br></br>
+	<div id="contact" class="popup"> <!-- content of the contact pop up -->
+		<div class="popup-content">
+			<span class="close">&times;</span>
+			<h2>צור קשר</h2>
+			<p>מספר טלפון: 054-586-8105</p>
+					<p> שעות פעילות: <br> א-ה: 11:00-21:00<br>שישי: 11:00-14:00</p>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.9982378493896!2d35.041783026032384!3d32.76578128456311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dbbde20f5d879%3A0x64629f903d9abc2e!2zS2FwdWwncyBGb29kIFRydWNrINen16TXldec17PXoQ!5e0!3m2!1siw!2sil!4v1720729284128!5m2!1siw!2sil" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+	</div>
+	
+	<div id="admin" class="popup"> <!-- content of the admin pop up -->
+		<div class="popup-content">
+			<span class="close">&times;</span>
+			<div class="table-container">
+				<h2>איזור מנהל</h2>
+				</br></br>
+				<form action="/action_page.php">
+					<label for="pwd">סיסמה:</label>
+					<input type="password" id="pwd" name="pwd" minlength="8"><br><br>
+					<button type="button" onclick="enterPass()">שליחה</button>
+				</form>
+				<p id="pwd2"></p>
+				<p id="password"></p>
+			</div>
+		</div>
+	</div>
+	
+	</form>
+</body>
+</html>

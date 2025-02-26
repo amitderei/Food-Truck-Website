@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>Customer Recommendations</title>
+    <!--links for all css files,js files and jquery library-->
+    <link rel="stylesheet" href="recommend.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="hw33.js"></script>
+    <script src="hw44.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+   
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <!--tiktok saas and google reviews links-->
+    <script async src="https://www.tiktok.com/embed.js"></script>
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+</head>
+<body dir="rtl">
+    <!--navigation bar with each of the links of the other website parts. the contact page and admin zone links to functions in the js file-->
+    <div class="navbar">
+        
+        <img src="logo.png" class="logo">
+        <ul>
+            <li><a href="hw333.html" data-target="home" onclick="return CloseAllPopups();">בית</a></li>
+            <li><a href="cart333.html">הזמנה</a></li>
+            <li><a href="customers_recommend.html">לקוחות ממליצים</a></li>
+            <li><a href="#" onclick="return OpenContact();">צור קשר</a></li>
+            <li><a href="#" onclick="return OpenAdmin();">איזור מנהל</a></li>               
+        </ul>
+    </div>
+    <div id="reccomend">
+        <h1 id="recommend_headline">לקוחות ממליצים</h1>
+        <span> </br></br></br></span>
+        <div class="iphone-frame"> <!--iphone cover for decoration to the tiktok saas-->
+            <img src="iphone.jpg" alt="iPhone Frame" class="iphone-image">
+            <div class="screen">
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@arbel_elkayam/video/7203401292868373761" data-video-id="7203401292868373761" style="max-width: 605px;min-width: 325px;">
+                    <section> <!--tiktok video implementation-->
+                        <a target="_blank" title="@arbel_elkayam" href="https://www.tiktok.com/@arbel_elkayam?refer=embed">@arbel_elkayam</a> אז הפעם הגענו למקום ממש שווה בצפון, אהבתם? 
+                        <a title="foryou" target="_blank" href="https://www.tiktok.com/tag/foryou?refer=embed">#foryou</a> 
+                        <a title="המלצות" target="_blank" href="https://www.tiktok.com/tag/%D7%94%D7%9E%D7%9C%D7%A6%D7%95%D7%AA?refer=embed">#המלצות</a> 
+                        <a title="קפולס" target="_blank" href="https://www.tiktok.com/tag/%D7%A7%D7%A4%D7%95%D7%9C%D7%A1?refer=embed">#קפולס</a> 
+                        <a title="טיוליםבארץ" target="_blank" href="https://www.tiktok.com/tag/%D7%98%D7%99%D7%95%D7%9C%D7%99%D7%9D%D7%91%D7%90%D7%A8%D7%A5?refer=embed">#טיוליםבארץ</a> 
+                        <a target="_blank" title="♬ Sweet Dreams - 染哥" href="https://www.tiktok.com/music/Sweet-Dreams-6873506208024627213?refer=embed">♬ Sweet Dreams - 染哥</a>
+                    </section> 
+                </blockquote>
+            </div>
+        </div>
+        <br><br>
+        <div class="clearfix">
+            <!--Photos of menu items(designed with float in the css) -->
+            <div class="pic1">
+                <img src="329127688_1258481171424902_8556227080838332715_n.jpg" width="350" height="350">
+            </div>
+            <div class="pic1">
+                <img src="339322193_1868677176826945_6483765554844857398_n.jpg" width="350" height="350">
+            </div>
+            <div class="pic1">
+                <img src="309821142_119062467607067_5241038373062617601_n.jpg" width="350" height="350">
+            </div>
+        </div>   
+        <br><br>
+        <!--saas of google reviews-->
+        <div>
+            <div class="elfsight-app-df41d703-4337-456c-88b6-3aa90b736672" data-elfsight-app-lazy></div>
+            <span> </br></br></br></span>
+        </div>
+    </div>
+</body>
+</html>
